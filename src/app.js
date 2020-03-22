@@ -50,6 +50,7 @@ class App extends Component {
     this.state = {
       options: options,
       lists: lists,
+      value: ""
     }
     this.handleCountry = this.handleCountry.bind(this)
     this.loadOptions = this.loadOptions.bind(this)
@@ -61,7 +62,8 @@ class App extends Component {
     this.state.lists = makeUnique(this.state.lists)
 
     this.setState({
-      lists: [...new Set(this.state.lists)]
+      lists: [...new Set(this.state.lists)],
+      value: ""
     }, () => {
       setLocal('items', this.state.lists)
     })
@@ -103,7 +105,7 @@ class App extends Component {
         <div className="row">
           <div className="col-md-8 offset-md-2">
             <h3 className="text-center" id="title">TimeZone Track </h3>
-            <AsyncSelect id="country" className="text-center" cacheOptions loadOptions={this.loadOptions} placeholder={"Search for your City"} onChange={this.handleCountry} noOptionsMessage={() => "Search for your City"} />
+            <AsyncSelect id="country" className="text-center" cacheOptions loadOptions={this.loadOptions} placeholder={"Search for your City"} onChange={this.handleCountry} noOptionsMessage={() => "Search for your City"} value={this.state.value}/>
             <List lists={this.state.lists} deleteCountry={this.deleteCountry}/>
           </div>
         </div>
