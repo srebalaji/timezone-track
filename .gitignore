@@ -1,0 +1,4 @@
+/cloudflare-workers
+/node_modules
+/timezone-data
+.DS_Store

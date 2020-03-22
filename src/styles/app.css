@@ -1,0 +1,82 @@
+body {
+  margin: 50px auto;
+  background-color: #fff;
+}
+
+#country {
+  width: 70%;
+  /*padding-bottom: 50px;*/
+  margin: auto;
+}
+
+#title {
+  margin-bottom: 50px;
+  color: #52244f;
+}
+
+.card {
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.card-body {
+  padding: 0.75rem;
+}
+
+#country-name {
+  color: #52244f;
+  font-size: 1.2rem;
+}
+
+#timezone {
+  color: #dd1d64;
+  font-size: 0.8rem;
+}
+
+#time {
+  color: #dd1d64;
+  font-size: 1rem;
+}
+
+.small-p {
+  font-size: 0.8rem;
+}
+
+.small-padding {
+  padding-top: 5px;
+}
+
+.app-red {
+  color: #52244f;
+}
+
+.small-letter-spacing {
+  letter-spacing: 1.2px;
+}
+
+.signal-red {
+  color: #ff586e;
+}
+
+.signal-green {
+  color: #54d87b;
+}
+
+.vertical-center {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.custom-text-center {
+  justify-content: center
+}
+
+.custom-text-left {
+  justify-content: left
+}
+
+.pointer {
+  cursor: pointer;
+}
