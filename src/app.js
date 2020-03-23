@@ -103,7 +103,7 @@ class App extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-md-8 offset-md-2">
+          <div className="col-md-10 offset-md-1">
             <h3 className="text-center" id="title">TimeZone Track </h3>
             <AsyncSelect id="country" className="text-center" cacheOptions loadOptions={this.loadOptions} placeholder={"Search for your City"} onChange={this.handleCountry} noOptionsMessage={() => "Search for your City"} value={this.state.value}/>
             <List lists={this.state.lists} deleteCountry={this.deleteCountry}/>
@@ -168,12 +168,12 @@ class Card extends Component {
               <div style={{"minHeight": "18px"}} className="">
                 { this.state.showClose && <FontAwesomeIcon icon={faTimes} className="pointer" style={{display: this.state.showClose, "marginLeft": "auto", "marginRight": 0}} onClick={this.deleteCountry.bind(this, this.props.countryName)} key={this.props.countryName}/> }
               </div>
-              <div className="row" >
-                <div className="col">
+              <div className="row">
+                <div className="col-sm-6" style={{textAlign: "center"}}>
                   <h4 id="country-name">{this.props.countryName}</h4>
                   <p id="timezone">{timezone}</p>
                 </div>
-                <div className="col vertical-center custom-text-center pull-right">
+                <div className="col-sm-6 pull-right" style={{textAlign: "center"}}>
                   <h5 id="time" style={{display: "block"}}>
                     {moment().tz(timezone).format('MMM Do, hh:mm A')} <br/>
                     <Diffhours timezone={timezone}/>
