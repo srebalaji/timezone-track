@@ -14,6 +14,15 @@ body {
   color: #52244f;
 }
 
+#loading {
+  color: #247ba0;
+  margin-top: 10px;
+}
+
+#share-error-red {
+  color: #ff586e;
+}
+
 .card {
   margin: 0;
   border: none;
@@ -22,6 +31,14 @@ body {
 
 .card-body {
   padding: 0.75rem;
+}
+
+#share {
+  margin-right: 0px;
+  margin-left: auto;
+  display: block;
+  margin-bottom: 15px;
+  font-size: 0.75em;
 }
 
 #country-name {
